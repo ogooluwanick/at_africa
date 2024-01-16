@@ -1,0 +1,33 @@
+{
+  "name": "at_africa",
+  "version": "1.0.0",
+  "description": "AtAfrica application exam project",
+  "main": "server/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server/server.js",
+    "build": "webpack",
+    "server": "nodemon server/server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently  \" npm run server \"  \"npm run client\" "
+  },
+  "keywords": [
+    "exam",
+    "frontend",
+    "backend"
+  ],
+  "author": "ogo",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-graphql": "^0.12.0",
+    "mongoose": "^8.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.3"
+  }
+}
