@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { FaArrowRight } from 'react-icons/fa';
 
 const LandingPage = () => {
+        // eslint-disable-next-line no-unused-vars
         const [scrollPos, setScrollPos] = useState(0);
         const [screen, setScreen] = useState(0)
 
@@ -226,6 +227,25 @@ const LandingPage = () => {
                         Our goal is to set you up for reliable returns across a range of market conditions.”
                 </h4>
                 <p className="b2"><b>BEN REEVES</b>, CHIEF INVESTMENT OFFICER</p>
+        </div>
+
+        <div className="pricing_plans">
+                <h3>Get more as your wealth grows</h3>
+
+                <div className="plans">
+                        {
+                                [
+                                        {assestVal:1 , name:"Core", desc:"Get started with simple, low-fee financial tools.", features:["Automatic portfolio rebalancing","Help from a real, friendly, human"], fee:"0.5%"},
+                                        {assestVal:100000 , name:"Premium", desc:"Make the most of your investments with lower fees and tailored advice.", features:["20% lower management fee on your managed investments","Financial goal setting with an advisor"], fee:"0.4%"},
+                                        {assestVal:500000 , name:"Generation", desc:"Build your legacy with expert guidance from your dedicated team of advisors.", features:["All Core and Premium features","Dedicated team of advisors"], fee:"0.2%*–0.4%"},
+
+                                ].map((plan, i)=>(
+                                        <div className="plan">
+
+                                        </div>
+                                ))
+                        }
+                </div>
         </div>
 
     </div>
