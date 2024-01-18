@@ -1068,6 +1068,7 @@ button{
                         padding: 64px  64px 48px ;
                         border-radius: 14px;
                         overflow: hidden;
+                        cursor: pointer;
 
 
                         h4{
@@ -1201,6 +1202,7 @@ button{
         .pricing_plans{
                 margin-top: 30vh;
                 margin-bottom: 20vh;
+                cursor: pointer;
 
                 h3{
                         max-width: 560px;
@@ -1216,6 +1218,7 @@ button{
                                 flex: 1;
                                 padding: 32px;
                                 border-radius: 14px;
+                                transition: all .3s ease-in-out;
 
                                 >.b4{margin-bottom: 16px;}
                                 >.b2{min-height: 72px;}
@@ -1232,6 +1235,10 @@ button{
                                         .b2{
                                                 margin-top: 4px;
                                         }
+                                }
+
+                                &:hover, &:focus{
+                                        transform: translateY(6px);
                                 }
                         }
                 }

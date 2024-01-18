@@ -3,6 +3,8 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
+import Instrument from 'mongoose';
+const Instrument = require('./InstrumentModel'); // Adjust the path based on your file structure
 
 const app=express()
 
@@ -19,11 +21,14 @@ app.use(
 )
 dotenv.config();
 
-const port = process.env.PORT || 3000;
+
+
+const PORT = process.env.PORT || 3000;
 
 mongoose.connect(process.env.MONGODB_URL)
 
 
+app.use('/api/seeder', seederRouter)
 
 
 app.listen(PORT, ()=>{
