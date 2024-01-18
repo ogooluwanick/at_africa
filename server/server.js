@@ -1,10 +1,9 @@
 import express from 'express';
-import cors from 'cors';
 import bodyParser from 'body-parser';
+import cors from 'cors';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
-import Instrument from 'mongoose';
-const Instrument = require('./InstrumentModel'); // Adjust the path based on your file structure
+import seederRouter from './routers/seederRouter.js';
 
 const app=express()
 
@@ -21,7 +20,7 @@ app.use(
 )
 dotenv.config();
 
-
+ 
 
 const PORT = process.env.PORT || 3000;
 
