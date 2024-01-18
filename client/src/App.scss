@@ -1014,11 +1014,13 @@ button{
         }
 
         .features{
-                margin-top: 25vh;
+                margin-top: 30vh;
 
                 display: flex;
                 flex-direction: column;
                 gap: 48px;
+
+                
 
                 .top_row{
                         display: flex;
@@ -1065,10 +1067,15 @@ button{
                 .feature{
                         padding: 64px  64px 48px ;
                         border-radius: 14px;
+                        overflow: hidden;
 
 
                         h4{
                                 margin-bottom: 16px;
+                        }
+
+                        >p{
+                                max-width: 975px
                         }
 
                         button{
@@ -1092,6 +1099,15 @@ button{
                                 margin-left: auto;
                                 top: -50px;
                                 transition: all .25s ease-in-out;
+
+                                @media screen and (max-width:375px) {
+                                        width: 100% !important;
+                                        height: unset !important;
+                                        aspect-ratio: 1/1.2 !important;
+                                        top: 12px;
+                                }
+
+
                         }
 
                         &:focus, &:hover{
@@ -1108,6 +1124,34 @@ button{
                                         transform: scale(1.05);
                                 }
                         }
+
+                        @media screen and (max-width:900px) {
+                                padding: 32px;
+                        }
+                }
+
+                &.dark{
+                        color: #fff;
+                        background-color: #1c1b1b;
+                        padding: 128px 28px;
+                        margin-left: -28px ;
+                        margin-right: -28px ;
+
+
+                        .feature{       
+                                background-color: #32302f;
+
+                                img{
+                                        top: 15px;
+                                }
+
+                        }
+
+                        @media screen and (max-width:900px) {
+                                margin-left: -16px ;
+                                margin-right: -16px ;
+                        }
+                        
                 }
         }
 }

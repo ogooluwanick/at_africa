@@ -38,12 +38,12 @@ const LandingPage = () => {
   return (
     <div className='landingPage app__container'>
         <div className="hero_container  app__flex" >
-                <motion.div  whileInView={{y:["-25px", "0px"], opacity:[0,1]}} transition={{duration:1}} className="hero_data">
+                <motion.div  whileInView={{y:["-20px", "0px"], opacity:[0,1]}}  className="hero_data">
                         <h1>Managed investing made to grow your wealth</h1>
                         <p className="b1">We'll build you a smart, sophisticated investment portfolio designed to help you achieve your goals.</p>
                         <button className="right_btn primary">Get started</button>
                 </motion.div>
-                <motion.div  whileInView={{y:["25px", "0px"], opacity:[0,1]}} transition={{duration:1}} className="hero_vid">
+                <motion.div  whileInView={{y:["20px", "0px"], opacity:[0,1]}}  className="hero_vid">
                         <video width="480" height="270"  aria-hidden="true"
                                 aria-label="video"
                                 autoPlay
@@ -86,7 +86,7 @@ const LandingPage = () => {
         </div>
 
         <div className="our_pros" style={{alignItems:"flex-start", gap:screen>900?"88px":"120px",justifyContent:"flex-end",flexDirection:screen>900 ? "row-reverse" : "column-reverse"}}>
-                <motion.div  whileInView={{y:["-16px", "0px"], opacity:[0,1]}} transition={{duration:1}} className="right_child desc_cta">
+                <motion.div  whileInView={{y:["-16px", "0px"], opacity:[0,1]}}  className="right_child desc_cta">
                         <h4>Invest with confidence</h4>
 
                         <h6>Withstand market highs and lows</h6>
@@ -109,7 +109,7 @@ const LandingPage = () => {
                         <div className="">
                                 <img src="/imgs/hero_zoe.avif" alt="site logo" width={505} height={560} />
                         </div>
-                        <motion.div whileInView={{x:["0px", screen>900?"16px":"11px"],y:["0px", screen>900?"16px":"11px"]}} transition={{duration:1}} className="img_before" />
+                        <motion.div whileInView={{x:["0px", screen>900?"16px":"11px"],y:["0px", screen>900?"16px":"11px"]}} className="img_before" />
 
                         <p className="b3"><b>ZOE WOLPERT</b>, ADVISOR, CIM® (CHARTERED INVESTMENT MANAGER)</p>
 
@@ -143,14 +143,81 @@ const LandingPage = () => {
 
                         </div>
                 </div>
-                <div className="bottom_row feature" style={{backgroundColor:"#e4e9d3"}} >
+                <div className="bottom_row feature" style={{backgroundColor:"#e4e9d3",  maxHeight:screen>975 && "340px"}} >
                         <h4>Halal investing</h4>
                         <p className="b1">
                                 Invest according to your faith with Canada&apos;s first ever Shariah-complaint ETF, certified by Islamic scholars and verified with a Fund Fatwa.
                         </p>
                         <button><FaArrowRight /></button>
-                        <img src="/imgs/h_coin.avif" alt="hero deco" style={{width:"200px", height:"220px"}} />
+                        <img src="/imgs/h_coin.avif" alt="hero deco" style={{width:"200px", height:"220px", top: screen>975 && "-130px"}} />
                 </div>
+        </div>
+
+        <div className="features dark">
+                <div className="top_row">
+                        <div className="leftchild">
+                                <h3>Invest beyond public markets</h3>
+                                <p className="b1">Our alternatives investing program is exclusively available to Wealthsimple Premium and Generation clients. It’s where you get unprecedented access to opportunities traditionally reserved for industry insiders and the ultra-wealthy.</p>
+
+                                <div className="feature" style={{backgroundColor:"#32302f", maxHeight:"560px"}} >
+                                        <h4>Classic portfolio</h4>
+                                        
+                                        <p className="b1">
+                                                Smart and diversified, built for long-term growth in fluctuating markets with a wide range of low-fee ETFs.
+                                        </p>
+                                        <button><FaArrowRight /></button>
+                                        <img src="/imgs/h_cube2.avif" alt="hero deco" style={{width:screen>1000?"70%":"270px", height:screen>1000?"50%":"310px", left:screen>1000&&"15%"}} />
+                                </div>
+                        </div>
+                        <div className="rightchild feature" style={{backgroundColor:"#32302f"}}>
+                                <h4>Socially responsible investing</h4>
+
+                                <p className="b1">
+                                        Invest according to your faith with Canada's first ever Shariah-complaint ETF, certified by Islamic scholars and verified with a Fund Fatwa.                               
+                                </p>
+                                <button><FaArrowRight /></button>
+                                <img src="/imgs/h_cube1.avif" alt="hero deco" style={{width:"270px", height:"310px", top: screen>1000 && "40px"}} />
+
+                        </div>
+                </div>
+        </div>
+
+        <div className="our_pros" style={{alignItems:"flex-start", gap:screen>900?"88px":"120px",justifyContent:"flex-end",flexDirection:screen>900 ? "row" : "column"}}>
+                <motion.div  whileInView={{y:["-16px", "0px"], opacity:[0,1]}} transition={{duration:1}} className="right_child desc_cta">
+                        <h4>Always here to help</h4>
+
+                        <h6>Learn as you go</h6>
+                        <p className="b2">Find answers to your investing questions in our help centre, personal finance magazine, or right in the app.</p>
+                     
+                        <h6>Talk to us any time</h6>
+                        <p className="b2">Our support team is available by phone, chat, or email 7 days a week to answer any questions about your account.</p>
+                        
+                        <h6>Speak to an advisor</h6>
+                        <p className="b2">Premium and Generation clients have access to a dedicated advisor. They&apos;re here to answer your money questions, no matter how complex.</p>
+
+
+                        <a className="right_btn primary" href={"/homeowners"}>
+                                <span>See more</span>
+                                {/* <SvgRight id="svgright"   /> */}
+                        </a>
+                </motion.div>
+                <div className="left_child desc_img">
+                        
+                        <div className="">
+                                <img src="/imgs/h_sunmeet.avif" alt="site logo" width={505} height={560} />
+                        </div>
+                        <motion.div whileInView={{x:["0px", screen>900?"-16px":"-11px"],y:["0px", screen>900?"16px":"11px"]}} transition={{duration:1}} className="img_before"  style={{backgroundColor:"#e4e9d3"}}/>
+
+                        <p className="b3"><b>SUNMEET HANSPAL</b>, ADVISOR, CIM® (CHARTERED INVESTMENT MANAGER)</p>
+                       
+
+
+
+                </div>
+        </div>
+
+        <div className="our_qoute">
+                
         </div>
 
     </div>
