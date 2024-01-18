@@ -217,7 +217,15 @@ const LandingPage = () => {
         </div>
 
         <div className="our_qoute">
-                
+                <span>❝</span>
+                <hr />
+                <h4>
+                        The best way to achieve your financial goals is by investing in low-cost, diversified portfolios of risk-appropriate assets.
+                        <br />
+                        <br />
+                        Our goal is to set you up for reliable returns across a range of market conditions.”
+                </h4>
+                <p className="b2"><b>BEN REEVES</b>, CHIEF INVESTMENT OFFICER</p>
         </div>
 
     </div>
