@@ -1200,6 +1200,57 @@ button{
 
         .pricing_plans{
                 margin-top: 30vh;
-                
+                margin-bottom: 20vh;
+
+                h3{
+                        max-width: 560px;
+                        margin-bottom: 40px;
+                }
+
+                .plans{
+                        @extend .app__flex;
+                        gap: 42px;
+
+
+                        .plan{
+                                flex: 1;
+                                padding: 32px;
+                                border-radius: 14px;
+
+                                >.b4{margin-bottom: 16px;}
+                                >.b2{min-height: 72px;}
+                                
+                                >h4{margin-bottom: 16px;}
+
+                                .mt_fee{
+                                        background-color: #fff;
+                                        padding: 24px;
+                                        margin-top: 16px;
+                                        border-radius: 12px;
+                                        color: var(--black-main);
+
+                                        .b2{
+                                                margin-top: 4px;
+                                        }
+                                }
+                        }
+                }
+
+                @media screen and (max-width:1050px) {
+                        >h3{
+                                font-size: 32px;
+                                line-height: 38.4px;
+                        }
+
+                        .plans{
+                                flex-direction: column;
+
+                                .plan{
+                                        width: 100%;
+                                        max-width: 530px;
+                                }
+                        }
+                }
+
         }
 }

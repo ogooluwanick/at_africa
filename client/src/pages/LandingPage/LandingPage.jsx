@@ -235,13 +235,24 @@ const LandingPage = () => {
                 <div className="plans">
                         {
                                 [
-                                        {assestVal:1 , name:"Core", desc:"Get started with simple, low-fee financial tools.", features:["Automatic portfolio rebalancing","Help from a real, friendly, human"], fee:"0.5%"},
-                                        {assestVal:100000 , name:"Premium", desc:"Make the most of your investments with lower fees and tailored advice.", features:["20% lower management fee on your managed investments","Financial goal setting with an advisor"], fee:"0.4%"},
-                                        {assestVal:500000 , name:"Generation", desc:"Build your legacy with expert guidance from your dedicated team of advisors.", features:["All Core and Premium features","Dedicated team of advisors"], fee:"0.2%*–0.4%"},
+                                        {assestVal:1 , name:"Core", desc:"Get started with simple, low-fee financial tools.", features:["Automatic portfolio rebalancing","Help from a real, friendly, human"], fee:"0.5%", bgc:"#f8f0e5"},
+                                        {assestVal:100000 , name:"Premium", desc:"Make the most of your investments with lower fees and tailored advice.", features:["20% lower management fee on your managed investments","Financial goal setting with an advisor"], fee:"0.4%", bgc:"#eeece8"},
+                                        {assestVal:500000 , name:"Generation", desc:"Build your legacy with expert guidance from your dedicated team of advisors.", features:["All Core and Premium features","Dedicated team of advisors"], fee:"0.2%*–0.4%", bgc:"#2a2c33", color:"#fff"},
 
                                 ].map((plan, i)=>(
-                                        <div className="plan">
+                                        <div className="plan" style={{backgroundColor: plan.bgc, color:plan?.color}}>
+                                                <p className="b4">₦ {plan.assestVal.toLocaleString()} IN ASSETS</p>
+                                                <h4><span>{plan.name}</span> <FaArrowRight/></h4>
+                                                <p className="b2">{plan.desc}</p>
 
+                                                <ul>
+
+                                                </ul>
+
+                                                <div className="mt_fee">
+                                                        <h4>{plan.fee}</h4>
+                                                        <p className="b2">management fee</p>
+                                                </div>
                                         </div>
                                 ))
                         }
