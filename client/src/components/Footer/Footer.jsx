@@ -1,76 +1,98 @@
 import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
 import { FaFacebookF, FaLinkedinIn, FaTiktok } from 'react-icons/fa'
 import { AiFillInstagram } from 'react-icons/ai'
+import "./Footer.scss"
+import { Link, animateScroll as scroll } from 'react-scroll';
+
 
 
 const Footer = () => {
 
   return (
-        <div className="right_footer">
+        <div className="footer">
                 <div className="footer_content">
                         <div className="footer_child">
-                                <Link className="logo-box" href={"/"} >
+                                <a className="logo-box" href={"/"} >
                                         <div  className={"logo"} >
-                                                <Image src="/logodocs/svg/right_logo.svg" alt="site logo" width={30} height={30} />
+                                                <img src="/imgs/aa_logo.png" alt="site logo" width={30} height={30} />
                                         </div>
 
-                                        <h1>Rightbuilder</h1>
-                                </Link>
+                                        <h1>Lucre3</h1>
+                                </a>
 
                                 <div className="nation">
                                         <div  className={"logo"} >
-                                                <Image src="/siteImgs/nig_flag.svg" alt="site logo" width={30} height={30} />
+                                                <img src="/imgs/nig_flag.svg" alt="site logo" width={30} height={30} />
                                         </div>
 
-                                        <p className="b2">Nigeria</p>
+                                        <p className="b2">Africa</p>
 
                                 </div>
 
                         </div>
                         <div className="footer_child">
                                 <p className="b2">
-                                        Product
+                                        Investing
                                 </p>
 
-                                <Link className="b2" href={"/homeowners"}>For Homeowners</Link>
-                                <Link className="b2" href={"/artisans"}>For Artisans</Link>
+                                <a className="b2" href={"/#"}>Automated Investing</a>
+                                <a className="b2" href={"/#"}>Stock Investing</a>
+                                <a className="b2" href={"/#"}>Explore all investments</a>
+                                <a className="b2" href={"/#"}>Retirement</a>
+                                <a className="b2" href={"/#"}>College</a>
+                                <a className="b2" href={"/#"}>Socially Responsible</a>
+                                <a className="b2" href={"/#"}>Pricing</a>
+                                <a className="b2" href={"/#"}>Tax-loss Harvesting</a>
+                                <a className="b2" href={"/#"}>Historical Performance</a>
+                                <Link className="b2" style={{cursor:"pointer"}}  to="top" smooth={true} duration={100} onClick={()=>scroll.scrollToTop()}>
+                                        Back to top
+                                </Link>
+
                         </div>
                         <div className="footer_child">
                                 <p className="b2">
                                         Company
                                 </p>
 
-                                <Link className="b2" href={"/about"}>About</Link>
-                                <Link className="b2" href={"/faq"}>FAQs</Link>
+                                <a className="b2" href={"/#"}>About Us</a>
+                                <a className="b2" href={"/#"}>Newsroom</a>
+                                <a className="b2" href={"/#"}>Reviews</a>
+                                <a className="b2" href={"/#"}>Careers</a>
+                                <a className="b2" href={"/#"}>Legal</a>
+                                <a className="b2" href={"/#"}>Sitemap</a>
                         </div>
                         <div className="footer_child">
                                 <p className="b2">
                                         Legal
                                 </p>
-
-                                <Link className="b2" href={""}>Terms of service</Link>
-                                <Link className="b2" href={""}>Privacy policy</Link>
+                                
+                                <a className="b2" href="/">Terms of service</a>
+                                <a className="b2" href="/">Privacy policy</a>
+                                <a className="b2" href="/">Accessibility</a>
+                                <a className="b2" href={"/#"}>Whitepapers</a>
                         </div>
                         <div className="footer_child">
                                 <p className="b2">
                                         Contact
                                 </p>
 
-                                <Link className="b2" href={"mailto:info@rightbuilder.africa"}>info@rightbuilder.africa</Link>
-                                <Link className="b2" href={"tel:+234 913 446 8874"}>+234 913 446 8874</Link>
+                                <a className="b2" href={"mailto:info@lucre3.africa"}>info@lucre3.africa</a>
+                                <a className="b2" href={"tel:+234 000 444 3333"}>+234 000 444 3333</a>
 
                                 <div className="socials">
-                                        <Link href="https://www.facebook.com/rightbuilder_africa" target="_blank" rel="noopener noreferrer" ><FaFacebookF aria-label='Rightbuilder facebook'/></Link>
-                                        <Link href="https://www.tiktok.com/@rightbuilder_africa" target="_blank" rel="noopener noreferrer" ><FaTiktok aria-label='Rightbuilder tictok'/></Link>
-                                        <Link href={`https://www.instagram.com/rightbuilder_africa`} target='_blank' rel="noopener noreferrer"><AiFillInstagram aria-label='Rightbuilder instagram'/></Link>
-                                        <Link href="http://wa.me/87898789889098" target="_blank" rel="noopener noreferrer"  ><FaLinkedinIn aria-label='Rightbuilder whatsapp'/></Link>
+                                        <a href="https://www.facebook.com/lucre3" target="_blank" rel="noopener noreferrer" ><FaFacebookF aria-label='Lucre3 facebook'/></a>
+                                        <a href="https://www.tiktok.com/@lucre3" target="_blank" rel="noopener noreferrer" ><FaTiktok aria-label='Lucre3 tictok'/></a>
+                                        <a href={`https://www.instagram.com/lucre3`} target='_blank' rel="noopener noreferrer"><AiFillInstagram aria-label='Lucre3 instagram'/></a>
+                                        <a href="http://wa.me/80004443333" target="_blank" rel="noopener noreferrer"  ><FaLinkedinIn aria-label='Lucre3 whatsapp'/></a>
                                 </div>
                         </div>
                 </div>
                 <hr style={{opacity:1}} />
-                <p className='b2 copy_reserved'>© 2023 Rightbuilder Inc. All rights reserved.</p>
+                <p className='b2 copy_reserved'>
+                        © 2023 Lucre3 Inc. All rights reserved.<br/>
+                        For further details see our Legal Disclosures. By using this website, you accept our Terms of Use and Privacy Policy. <br/>
+                        For information about filing a complaint please visit How to File a Complaint.
+                </p>
         </div>
   )
 }
