@@ -1,12 +1,11 @@
 import express from 'express';
-import mongoose from 'mongoose';
 
 import Instrument from '../modals/InstrumentModel.js';
 
 const seederRouter = express.Router();
 
+// Provide array of instruments data here
 const instrumentsData = [
-        // Provide array of instruments data here
         {
                 riskScore: 0,
                 nigerianStocks: 18,
