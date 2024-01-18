@@ -10,6 +10,8 @@ const Footer = () => {
 
   return (
         <div className="footer">
+                <hr style={{opacity:1, margin:"40px 0"}} />
+
                 <div className="footer_content">
                         <div className="footer_child">
                                 <a className="logo-box" href={"/"} >

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { FaArrowRight } from 'react-icons/fa';
 
 const LandingPage = () => {
         const [scrollPos, setScrollPos] = useState(0);
@@ -37,12 +38,12 @@ const LandingPage = () => {
   return (
     <div className='landingPage app__container'>
         <div className="hero_container  app__flex" >
-                <div className="hero_data">
+                <motion.div  whileInView={{y:["-25px", "0px"], opacity:[0,1]}} transition={{duration:1}} className="hero_data">
                         <h1>Managed investing made to grow your wealth</h1>
                         <p className="b1">We'll build you a smart, sophisticated investment portfolio designed to help you achieve your goals.</p>
                         <button className="right_btn primary">Get started</button>
-                </div>
-                <div className="hero_vid">
+                </motion.div>
+                <motion.div  whileInView={{y:["25px", "0px"], opacity:[0,1]}} transition={{duration:1}} className="hero_vid">
                         <video width="480" height="270"  aria-hidden="true"
                                 aria-label="video"
                                 autoPlay
@@ -55,7 +56,7 @@ const LandingPage = () => {
                                 <source src="/vids/v1.webm" type="video/webm"/>
                                 <track kind="captions" src=""/>
                         </video>
-                </div>
+                </motion.div>
         </div>
 
         <div className="usecases">
@@ -85,7 +86,7 @@ const LandingPage = () => {
         </div>
 
         <div className="our_pros" style={{alignItems:"flex-start", gap:screen>900?"88px":"120px",justifyContent:"flex-end",flexDirection:screen>900 ? "row-reverse" : "column-reverse"}}>
-                <motion.div  whileInView={{y:["-16px", "0px"], opacity:[0,1]}} className="right_child desc_cta">
+                <motion.div  whileInView={{y:["-16px", "0px"], opacity:[0,1]}} transition={{duration:1}} className="right_child desc_cta">
                         <h4>Invest with confidence</h4>
 
                         <h6>Withstand market highs and lows</h6>
@@ -108,10 +109,47 @@ const LandingPage = () => {
                         <div className="">
                                 <img src="/imgs/hero_zoe.avif" alt="site logo" width={505} height={560} />
                         </div>
-                        <motion.div whileInView={{x:["0px", screen>900?"16px":"11px"],y:["0px", screen>900?"16px":"11px"]}} className="img_before" />
+                        <motion.div whileInView={{x:["0px", screen>900?"16px":"11px"],y:["0px", screen>900?"16px":"11px"]}} transition={{duration:1}} className="img_before" />
 
                         <p className="b3"><b>ZOE WOLPERT</b>, ADVISOR, CIM® (CHARTERED INVESTMENT MANAGER)</p>
 
+                </div>
+        </div>
+
+        <div className="features">
+                <div className="top_row">
+                        <div className="leftchild">
+                                <h3>Investing that fits your goals and values</h3>
+                                <p className="b1">We’ll get to know you and what you’re saving for, then place you in a portfolio that helps you get there.</p>
+
+                                <div className="feature" style={{backgroundColor:"#f9f2ef"}} >
+                                        <h4>Classic portfolio</h4>
+                                        
+                                        <p className="b1">
+                                                Smart and diversified, built for long-term growth in fluctuating markets with a wide range of low-fee ETFs.
+                                        </p>
+                                        <button><FaArrowRight /></button>
+                                        <img src="/imgs/h_pie.avif" alt="hero deco" style={{width:"250px", height:"170px"}} />
+                                </div>
+                        </div>
+                        <div className="rightchild feature" style={{backgroundColor:"#f1f0f0"}}>
+                                <h4>Socially responsible investing</h4>
+
+                                <p className="b1">
+                                        Invest according to your faith with Canada's first ever Shariah-complaint ETF, certified by Islamic scholars and verified with a Fund Fatwa.                               
+                                </p>
+                                <button><FaArrowRight /></button>
+                                <img src="/imgs/h_plant.avif" alt="hero deco" style={{width:"220px", height:"330px"}} />
+
+                        </div>
+                </div>
+                <div className="bottom_row feature" style={{backgroundColor:"#e4e9d3"}} >
+                        <h4>Halal investing</h4>
+                        <p className="b1">
+                                Invest according to your faith with Canada&apos;s first ever Shariah-complaint ETF, certified by Islamic scholars and verified with a Fund Fatwa.
+                        </p>
+                        <button><FaArrowRight /></button>
+                        <img src="/imgs/h_coin.avif" alt="hero deco" style={{width:"200px", height:"220px"}} />
                 </div>
         </div>
 
