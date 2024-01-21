@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { FaArrowRight } from 'react-icons/fa';
+import RiskCalculator from '../../components/RiskCalculator/RiskCalculator';
 
 const LandingPage = () => {
         // eslint-disable-next-line no-unused-vars
@@ -59,6 +60,8 @@ const LandingPage = () => {
                         </video>
                 </motion.div>
         </div>
+
+        <RiskCalculator />
 
         <div className="usecases">
                 <h2>Professionally managed portfolios, tailored to you.</h2>
@@ -240,14 +243,10 @@ const LandingPage = () => {
                                         {assestVal:500000 , name:"Generation", desc:"Build your legacy with expert guidance from your dedicated team of advisors.", features:["All Core and Premium features","Dedicated team of advisors"], fee:"0.2%*–0.4%", bgc:"#2a2c33", color:"#fff"},
 
                                 ].map((plan, i)=>(
-                                        <div className="plan" style={{backgroundColor: plan.bgc, color:plan?.color}}>
+                                        <div className="plan" style={{backgroundColor: plan.bgc, color:plan?.color}} key={i}>
                                                 <p className="b4">₦ {plan.assestVal.toLocaleString()} IN ASSETS</p>
                                                 <h4><span>{plan.name}</span> <FaArrowRight/></h4>
                                                 <p className="b2">{plan.desc}</p>
-
-                                                <ul>
-
-                                                </ul>
 
                                                 <div className="mt_fee">
                                                         <h4>{plan.fee}</h4>

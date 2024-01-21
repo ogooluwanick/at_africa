@@ -2,7 +2,7 @@
 
 :root{
         --primary-blue : #0066F5 ;
-        --secondary-green : #9FF676 ;
+        --secondary-green : hsl(101, 88%, 71%) ;
         --purple-main : #7D64F2 ;
         --yellow-main : #FFDF6F ;
         --red-main : #F50000 ;
@@ -854,6 +854,163 @@ button{
                                 }
                         }
         
+                }
+        }
+
+        .risk_tol{
+                margin: 30vh -28px 30vh;
+                @extend .app__flex;
+
+                .risk_slider{
+                        position: relative;
+                        flex: 2;
+                        background-color: #1c1b1b;
+                        padding: 64px 32px;
+                        width: 100%;
+
+                        .sliderBox{
+                                position: relative;
+                                // top: px;
+                                background-color: #fff;
+                                padding: 24px;
+                                margin: auto;
+                                max-width: 450px;
+                                border-radius: 8px;
+                                filter: drop-shadow(-14.4442px 17.1565px 0.72222px rgba(125, 100, 242, 0.6));
+                                transition: all .3s ease-in-out;
+
+                                .header{
+                                        justify-content: space-between;
+                                        b{
+                                                font-weight: 500;
+                                        }
+                                }
+
+                                input{
+                                        margin-top: 16px;
+                                        width: 100%;
+
+
+                                        &::-webkit-slider-thumb {
+                                                appearance: none;
+                                                width: 25px;
+                                                height: 25px;
+                                                background: #3498db;
+                                                border-radius: 50%;
+                                                margin-top: -5px;
+                                                cursor: pointer;
+                                        }
+                                        &::-moz-range-thumb {
+                                                width: 25px;
+                                                height: 25px;
+                                                background: #3498db;
+                                                border-radius: 50%;
+                                                margin-top: -5px;
+                                                cursor: pointer;
+                                        }
+                                        &::-webkit-slider-runnable-track {
+                                                border-radius: 16px;
+                                                height: 6px;
+                                                background: linear-gradient(to right, #e4e9d3 40%, #EFECFD );
+
+                                        }
+                                              
+                                }
+                        }
+
+                        .sliderProfiles{
+                                color: #fff;
+                                margin-top: 4rem;
+                                
+                                .profileSection{
+                                        @extend .app__flex;
+                                        justify-content: space-between;
+                                        gap: 0 16px;
+                                        
+                                        >p{
+                                                flex: 1;
+                                                @extend .app__flex;
+                                                justify-content: flex-start;
+                                                gap: 8px;
+
+                                                svg{
+                                                        width: 24px;
+                                                        height: 24px;
+                                                }
+                                        }
+                                        .percentBox{
+                                                flex: 2;
+
+                                                .percent{
+                                                        width: var(--progress);
+                                                        border: 1px solid #fff;
+                                                        padding: 8px 16px;
+                                                }
+
+                                        }
+                                        
+                                        &:not(:first-of-type){
+                                                .percent{
+                                                        margin-top: -1px;
+                                                }
+                                        }
+                                }
+                        }
+
+                        &:hover, &:focus{
+                                .sliderBox{
+                                        filter: drop-shadow(-8px 12px 0 rgba(125, 100, 242, 0.6));
+                                }
+                        }
+                }
+                .risk_info{
+                        flex: 1;
+                        padding: 32px;
+
+                        p{
+                                margin-top: 40px;
+                        }
+
+                        .right_btn{
+                                margin-top: 40px;
+                                max-width: 170px;
+                        }
+                }
+
+                
+                @media screen and (max-width:975px) {
+                        margin-left: -16px ;
+                        margin-right: -16px ;
+
+                        flex-direction: column;
+                }
+                @media screen and (max-width:600px) {
+                        .profileSection{
+                                >p span{
+                                        max-width: 100px;
+                                        width: 100vw !important;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                }
+                        }
+
+                        .sliderBox{
+                                .header{
+                                        gap: 5px;
+                                        flex-wrap: wrap;
+
+                                        .b1{
+                                                font-size: 14px;
+                                                line-height: 20px;
+                                        }
+                                        .b2{
+                                                font-size: 12px;
+                                                line-height: 18px;
+                                        }
+                                }
+                        }
+
                 }
         }
 
